@@ -1,0 +1,39 @@
+{
+  "name": "browse-url",
+  "version": "1.0.0",
+  "description": "Open URLs in a browser. Easy to use and test your project.",
+  "keywords": [
+    "app",
+    "open",
+    "opener",
+    "opens",
+    "launch",
+    "start",
+    "default",
+    "browser",
+    "url",
+    "urls",
+    "website"
+  ],
+  "author": "Manuel Lõhmus <manuel@hauss.ee>",
+  "license": "MIT",
+  "main": "index.min.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js",
+    "index.min.js",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    "README.html",
+    "test.js"
+  ],
+  "homepage": "https://github.com/manuel-lohmus/browse-url#readme",
+  "bugs": "https://github.com/manuel-lohmus/browse-url/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuel-lohmus/browse-url.git"
+  }
+}

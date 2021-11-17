@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>browse-url: Open URLs in a browser.</title>
+</head>
+<body>
+
+    <h1 id="browse-url-open-urls-in-a-browser">browse-url: Open URLs in a browser.</h1>
+<p><a href="https://www.npmjs.com/package/browse-url"><img src="https://badgen.net/npm/v/browse-url" alt="npm-version" /></a>
+<a href="https://www.npmjs.com/package/browse-url"><img src="https://badgen.net/npm/dw/browse-url" alt="npm-week-downloads" /></a></p>
+<p>Open URLs in a browser. Easy to use and test your project.</p>
+<h2 id="installing">Installing</h2>
+<p><code>npm install --save-dev browse-url</code></p>
+<h2 id="usage-example">Usage example</h2>
+<pre><code class="language-js&quot;use">var http = require(&quot;http&quot;);
+var port = process.env.PORT || 1337;
+
+http.createServer(function (req, res) {
+    res.writeHead(200, { &quot;Content-Type&quot;: &quot;text/plain&quot; });
+    res.end(&quot;Hello World\n&quot;);
+}).listen(port);
+
+var url = &quot;http://localhost:&quot; + port + &quot;/&quot;;
+
+/* longer version */
+var browseURL = require(&quot;./index.min.js&quot;);
+var childProcess = browseURL(url);
+childProcess.on(&quot;exit&quot;, function (code) {
+    setTimeout(function () { process.exit(); }, 5000);
+});
+
+/* short version */
+//require(&quot;./index.min.js&quot;)(url);
+</code></pre>
+<h2 id="license">License</h2>
+<p><a href="LICENSE">MIT</a></p>
+<p>Copyright (c) 2021 Manuel Lõhmus <a href="mailto:manuel@hauss.ee">manuel@hauss.ee</a></p>
+
+
+</body>
+</html>
