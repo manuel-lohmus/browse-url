@@ -29,7 +29,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="bundleconfig.json" />
+    <Content Include="config-sets.json" />
     <Content Include="index.js" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />

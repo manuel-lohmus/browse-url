@@ -25,12 +25,37 @@ var url = "http://localhost:" + port + "/";
 /* longer version */
 var browseURL = require("./index.min.js");
 var childProcess = browseURL(url);
-childProcess.on("exit", function (code) {
-    setTimeout(function () { process.exit(); }, 5000);
-});
+if (childProcess) {
+    childProcess.on("exit", function (code) {
+        setTimeout(function () { process.exit(); }, 5000);
+    });
+}
 
 /* short version */
-//require("./index.min.js")(url);
+//require("browse-url");
+//require("browse-url")(url);
+```
+
+## Config-sets file
+
+config-sets.json [*Read more...*](https://github.com/manuel-lohmus/config-sets)
+```json
+{
+  "production": {
+    "isDebug": false,
+    "browse_url": {
+      "launch_url": "http://example.com/",
+      "enabled": false
+    }
+  },
+  "development": {
+    "isDebug": true,
+    "browse_url": {
+      "launch_url": "http://localhost:1337/",
+      "enabled": true
+    }
+  }
+}
 ```
 
 ## License

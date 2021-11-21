@@ -25,12 +25,34 @@ var url = &quot;http://localhost:&quot; + port + &quot;/&quot;;
 /* longer version */
 var browseURL = require(&quot;./index.min.js&quot;);
 var childProcess = browseURL(url);
-childProcess.on(&quot;exit&quot;, function (code) {
-    setTimeout(function () { process.exit(); }, 5000);
-});
+if (childProcess) {
+    childProcess.on(&quot;exit&quot;, function (code) {
+        setTimeout(function () { process.exit(); }, 5000);
+    });
+}
 
 /* short version */
-//require(&quot;./index.min.js&quot;)(url);
+//require(&quot;browse-url&quot;);
+//require(&quot;browse-url&quot;)(url);
+</code></pre>
+<h2 id="config-sets-file">Config-sets file</h2>
+<p>config-sets.json <a href="https://github.com/manuel-lohmus/config-sets"><em>Read more...</em></a></p>
+<pre><code class="language-json">{
+  &quot;production&quot;: {
+    &quot;isDebug&quot;: false,
+    &quot;browse_url&quot;: {
+      &quot;launch_url&quot;: &quot;http://example.com/&quot;,
+      &quot;enabled&quot;: false
+    }
+  },
+  &quot;development&quot;: {
+    &quot;isDebug&quot;: true,
+    &quot;browse_url&quot;: {
+      &quot;launch_url&quot;: &quot;http://localhost:1337/&quot;,
+      &quot;enabled&quot;: true
+    }
+  }
+}
 </code></pre>
 <h2 id="license">License</h2>
 <p><a href="LICENSE">MIT</a></p>

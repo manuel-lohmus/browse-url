@@ -1,0 +1,16 @@
+{
+  "production": {
+    "isDebug": false,
+    "browse_url": {
+      "launch_url": "http://example.com/",
+      "enabled": false
+    }
+  },
+  "development": {
+    "isDebug": true,
+    "browse_url": {
+      "launch_url": "http://localhost:1337/",
+      "enabled": true
+    }
+  }
+}

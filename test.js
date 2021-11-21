@@ -12,9 +12,12 @@ var url = "http://localhost:" + port + "/";
 /* longer version */
 var browseURL = require("./index.min.js");
 var childProcess = browseURL(url);
-childProcess.on("exit", function (code) {
-    setTimeout(function () { process.exit(); }, 5000);
-});
+if (childProcess) {
+    childProcess.on("exit", function (code) {
+        setTimeout(function () { process.exit(); }, 5000);
+    });
+}
 
 /* short version */
-//require("./index.min.js")(url);
+//require("browse-url");
+//require("browse-url")(url);
