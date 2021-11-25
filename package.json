@@ -1,6 +1,6 @@
 {
   "name": "browse-url",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Open URLs in a browser. Easy to use and test your project.",
   "keywords": [
     "app",
@@ -18,10 +18,12 @@
   "author": "Manuel Lõhmus <manuel@hauss.ee>",
   "license": "MIT",
   "main": "index.min.js",
+  "browser": "browser.js",
   "scripts": {
     "test": "node test.js"
   },
   "files": [
+    "browser.js",
     "config-sets.json",
     "index.js",
     "index.min.js",

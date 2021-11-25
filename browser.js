@@ -1,0 +1,1 @@
+throw new Error("'browse-url' does not work in the browser.");
